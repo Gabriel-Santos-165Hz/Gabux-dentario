@@ -1,0 +1,1085 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f1e8;
+    color: #29251f;
+    transition: 0.4s;
+}
+
+body.dark-mode {
+    background: #171411;
+    color: #eee;
+}
+
+
+/* ================= MENU ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(35, 30, 24, 0.96);
+
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    max-width: 1250px;
+    height: 75px;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #d9b36c;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+
+    list-style: none;
+
+    gap: 23px;
+}
+
+.nav-links a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d9b36c;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+.theme-btn {
+    border: 1px solid #d9b36c;
+
+    background: transparent;
+
+    color: #d9b36c;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background: #d9b36c;
+
+    color: #29231c;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(20, 17, 13, 0.74),
+            rgba(20, 17, 13, 0.74)
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Jos%C3%A9_da_Silva_Xavier%2C_o_Tiradentes.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 120px 8%;
+}
+
+.hero-content {
+    max-width: 750px;
+
+    color: white;
+}
+
+.small-title {
+    color: #d9b36c;
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 7vw, 90px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero p {
+    max-width: 600px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #eee;
+}
+
+.hero-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.btn,
+.btn-outline {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 14px 28px;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.btn {
+    background: #b88b45;
+
+    color: white;
+}
+
+.btn:hover {
+    background: #d3a65f;
+
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 1px solid #d9b36c;
+
+    color: #d9b36c;
+}
+
+.btn-outline:hover {
+    background: #d9b36c;
+
+    color: #29231c;
+}
+
+
+/* ================= SEÇÕES ================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 110px 25px;
+}
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 60px;
+}
+
+.section-title span {
+    color: #b88b45;
+
+    font-weight: bold;
+}
+
+.section-title h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+}
+
+.light h2 {
+    color: white;
+}
+
+
+/* ================= HISTÓRIA ================= */
+
+.history-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.history-image img {
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    box-shadow: 20px 20px 0 #d9b36c;
+}
+
+.history-text p {
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= LINKS ================= */
+
+.source-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #a87835;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    border-bottom: 1px solid transparent;
+
+    transition: 0.3s;
+}
+
+.source-link:hover {
+    color: #d19d52;
+
+    border-bottom-color: #d19d52;
+
+    transform: translateX(5px);
+}
+
+.dark-link {
+    color: #d9b36c;
+}
+
+
+/* ================= INCONFIDÊNCIA ================= */
+
+.dark-section {
+    background: #29231c;
+
+    color: white;
+
+    padding: 110px 8%;
+}
+
+.inconfidencia-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+}
+
+.inconfidencia-content p {
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+    color: #ddd;
+}
+
+.quote {
+    border-left: 3px solid #d9b36c;
+
+    padding: 35px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    line-height: 1.5;
+
+    color: #e7d5b5;
+}
+
+.quote span {
+    font-size: 60px;
+
+    color: #d9b36c;
+}
+
+
+/* ================= DERRAMA ================= */
+
+.info-section {
+    padding: 100px 8%;
+
+    background: #e9e1d1;
+}
+
+.info-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 250px 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.info-number {
+    font-family: "Playfair Display", serif;
+
+    font-size: 100px;
+
+    color: #b88b45;
+
+    font-weight: bold;
+}
+
+.info-content h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.info-content p {
+    max-width: 750px;
+
+    line-height: 1.9;
+}
+
+
+/* ================= TIMELINE ================= */
+
+.timeline {
+    max-width: 800px;
+
+    margin: auto;
+
+    border-left: 2px solid #b88b45;
+
+    padding-left: 40px;
+}
+
+.timeline-item {
+    position: relative;
+
+    margin-bottom: 60px;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition: 0.7s;
+}
+
+.timeline-item.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -50px;
+
+    top: 5px;
+
+    width: 17px;
+
+    height: 17px;
+
+    border-radius: 50%;
+
+    background: #b88b45;
+
+    box-shadow: 0 0 0 6px #f5f1e8;
+}
+
+.year {
+    color: #b88b45;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.timeline-item h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    line-height: 1.7;
+}
+
+
+/* ================= PERSONAGENS ================= */
+
+.characters-section {
+    padding: 110px 8%;
+
+    background: #f5f1e8;
+}
+
+.characters {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.character-card {
+    padding: 35px 25px;
+
+    background: white;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    border-bottom: 3px solid #d9b36c;
+
+    transition: 0.3s;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.character-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: auto auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #29231c;
+
+    color: #d9b36c;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 27px;
+}
+
+.character-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.character-card p {
+    color: #777;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* ================= LEGADO ================= */
+
+.legacy-section {
+    padding: 110px 8%;
+
+    background: #29231c;
+
+    color: white;
+}
+
+.legacy-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 300px;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.legacy-content h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 50px;
+
+    margin-bottom: 25px;
+}
+
+.legacy-content p {
+    line-height: 1.9;
+
+    color: #ddd;
+
+    margin-bottom: 20px;
+}
+
+.legacy-box {
+    border: 1px solid #d9b36c;
+
+    padding: 45px 25px;
+
+    text-align: center;
+}
+
+.legacy-box strong {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 45px;
+
+    color: #d9b36c;
+}
+
+.legacy-box span {
+    display: block;
+
+    margin-top: 15px;
+
+    color: #ddd;
+}
+
+
+/* ================= GALERIA ================= */
+
+.gallery-section {
+    background: #e9e1d1;
+
+    padding: 110px 8%;
+}
+
+.gallery {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.gallery-card {
+    background: white;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.gallery-card img {
+    width: 100%;
+
+    height: 400px;
+
+    object-fit: cover;
+}
+
+.gallery-card div {
+    padding: 25px;
+}
+
+.gallery-card h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+.gallery-card p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+.gallery-source {
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+
+/* ================= CURIOSIDADES ================= */
+
+.curiosity-section {
+    padding: 110px 8%;
+
+    background: #29231c;
+
+    color: white;
+}
+
+.curiosity-container {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.curiosity-panel {
+    min-height: 300px;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #342c23,
+            #211d18
+        );
+
+    border: 1px solid #665238;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+
+    transition: 0.4s;
+}
+
+.curiosity-panel.active {
+    animation: curiosityAppear 0.5s ease;
+}
+
+@keyframes curiosityAppear {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+
+}
+
+.curiosity-label {
+    color: #d9b36c;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.curiosity-panel h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+}
+
+.curiosity-panel p {
+    color: #ddd;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+.curiosity-type {
+    margin: 25px auto 0;
+
+    padding: 7px 14px;
+
+    border: 1px solid #b88b45;
+
+    color: #d9b36c;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    border-radius: 20px;
+}
+
+.curiosity-buttons {
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.curiosity-btn,
+.favorite-btn {
+    padding: 14px 24px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+    transition: 0.3s;
+}
+
+.curiosity-btn {
+    background: #b88b45;
+
+    border: none;
+
+    color: white;
+}
+
+.curiosity-btn:hover {
+    background: #d3a65f;
+
+    transform: translateY(-3px);
+}
+
+.favorite-btn {
+    background: transparent;
+
+    border: 1px solid #d9b36c;
+
+    color: #d9b36c;
+}
+
+.favorite-btn:hover {
+    background: #d9b36c;
+
+    color: #29231c;
+}
+
+.favorite-btn.favorited {
+    background: #d9b36c;
+
+    color: #29231c;
+}
+
+.curiosity-stats {
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+.curiosity-stats strong {
+    color: #d9b36c;
+}
+
+
+/* ================= FONTES ================= */
+
+.sources {
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+.sources h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+.sources p {
+    max-width: 700px;
+
+    margin: 10px auto 30px;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+.source-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.source-buttons a {
+    padding: 12px 18px;
+
+    border: 1px solid #b88b45;
+
+    color: #8d642e;
+
+    text-decoration: none;
+
+    border-radius: 4px;
+
+    transition: 0.3s;
+}
+
+.source-buttons a:hover {
+    background: #b88b45;
+
+    color: white;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #201c17;
+
+    color: #aaa;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+#topBtn {
+    margin-top: 15px;
+
+    padding: 10px 18px;
+
+    border: 1px solid #b88b45;
+
+    background: transparent;
+
+    color: #d9b36c;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+}
+
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .characters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .theme-btn {
+        margin-left: auto;
+
+        margin-right: 15px;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: #29231c;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .history-grid,
+    .inconfidencia-content,
+    .legacy-content,
+    .info-content {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .characters {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 120px 25px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .info-number {
+        font-size: 70px;
+    }
+
+    .legacy-content h2 {
+        font-size: 40px;
+    }
+
+    .curiosity-panel {
+        padding: 30px 20px;
+    }
+
+    .curiosity-panel h3 {
+        font-size: 28px;
+    }
+}
